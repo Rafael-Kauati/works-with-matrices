@@ -1,9 +1,12 @@
 from maTrix import Matrix
 
-a = Matrix(2,2)
-a.set_elements
+
 
 if(__name__ == "__main__"):
-    a.set_elements()
-    a.get_order()
+    print('\nChoose the number of rows(i) and columms(j) of the matrix : ')
+    i = int(input('\ni : '))
+    j = int(input('\nj : '))
+    m = Matrix(i,j)
+    m.set_elements()
+    m.get_order()
 
