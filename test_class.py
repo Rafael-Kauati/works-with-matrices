@@ -7,6 +7,7 @@ if(__name__ == "__main__"):
     i = int(input('\ni : '))
     j = int(input('\nj : '))
     m = Matrix(i,j)
-    m.set_elements()
+    m.get_element()
+    #m.set_elements()
     m.get_order()
 
