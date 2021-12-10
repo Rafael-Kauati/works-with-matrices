@@ -10,4 +10,5 @@ if(__name__ == "__main__"):
     m.get_element()
     #m.set_elements()
     m.get_order()
+    m.get_det()
 

@@ -1,4 +1,6 @@
 import numpy as np
+from scipy import linalg 
+import math
 class Matrix:
     def __init__(m, number_rows:int, number_columms:int):
         
@@ -6,7 +8,7 @@ class Matrix:
         m.j = number_columms 
 
         matrix = list([])
-        print(f'\n_____________\nInsert the value of the each element of the {m.i}{m.j} matrix')
+        print(f'\n_____________\nInsert the value of the each element of the {m.i},{m.j} matrix')
 
         for x in range(0, m.i + 1):
             
@@ -28,10 +30,10 @@ class Matrix:
 
 
 
+
     def get_order(m) -> int:
         print(f'A matrix of order : {m.i},{m.j}\n')
         return {m.i},{m.j}
-
 
 
     def get_element(m):
@@ -39,4 +41,12 @@ class Matrix:
 
         number_of_row = int(input('\nRow(i) : '))
         number_of_coluum = int(input('\nColuum(j) : '))
-        print('\n',m.matrix[number_of_row, number_of_coluum])
+        print(f'\n{number_of_row} {number_of_coluum} Element : ',m.matrix[number_of_row, number_of_coluum])
+
+
+    def get_det(m) -> float :
+        print(f'\n_____________')
+        arr = m.matrix
+        arr_Det = math.floor(linalg.det(arr))
+        print(f'Determinant of this matrix(approximate) : \n\n{arr_Det}')
+        
